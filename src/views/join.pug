@@ -1,0 +1,19 @@
+extends base
+
+block content 
+    if errorMessage
+        span=errorMessage
+    form(method="POST")
+        input(name="name", type ="text", required= true , placeholder="이름")
+        input(name="email", type ="email", required= true, placeholder="이메일 주소")
+        input(name="username", type ="text", required= true, placeholder="Id")
+        input(name="password", type ="password", required= true, placeholder="비밀번호")
+        input(name="password2", type ="password", required= true, placeholder="비밀번호 확인")
+        input(name="location", type ="text", required= true, placeholder="주소")
+        input(type="submit", value="회원가입")
+
+    hr  
+    div 
+        span 계정이 이미 있으신가요? 
+        a(href="/")   로그인 하기 &rarr;
+        
